@@ -1,107 +1,72 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { MapPin, Disc, Code2 } from "lucide-react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avishyant | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="avi pfp.png" alt="Avishyant PFP" class="pfp" />
+    <h1>Avishyant</h1>
+    <p class="location">📍 India</p>
+  </header>
 
-export default function Portfolio() {
-  return (
-    <div className="min-h-screen bg-[#0d1117] text-gray-100 flex flex-col items-center p-8 font-sans">
-      {/* Hero Section */}
-      <motion.img
-        src="/avi pfp.png"
-        alt="Avishyant PFP"
-        className="w-44 h-44 rounded-full border-4 border-emerald-400 shadow-lg mb-5"
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.9, type: "spring" }}
-      />
-      <h1 className="text-4xl font-extrabold tracking-wide">Avishyant</h1>
-      <p className="flex items-center gap-2 text-gray-400 mt-1">
-        <MapPin size={18} /> India
-      </p>
+  <!-- About Me -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      Hey! I’m <span class="highlight">Avishyant</span>, a Minecraft Developer based in India.
+      I love working on <span class="highlight">plugin configs</span>,
+      <span class="highlight">server performance</span>, and creating
+      <span class="highlight">custom gameplay features</span> that make communities thrive.
+      My work is all about making servers stable, fun, and memorable for players.
+    </p>
+  </section>
 
-      {/* About Me */}
-      <motion.section
-        className="max-w-2xl mt-8 text-center text-lg leading-relaxed"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-      >
-        <p>
-          Hey! I’m <span className="text-emerald-400 font-semibold">Avishyant</span>, a Minecraft Developer based in India. I love working on <span className="text-emerald-300">plugin configs</span>, <span className="text-emerald-300">server performance</span>, and creating <span className="text-emerald-300">custom gameplay features</span> that make communities thrive. My work is all about making servers stable, fun, and memorable for players.
-        </p>
-      </motion.section>
-
-      {/* Skills */}
-      <motion.section
-        className="max-w-3xl mt-12 grid gap-4"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-      >
-        <h2 className="text-2xl font-bold mb-3">What I Work With</h2>
-        <div className="flex flex-wrap gap-3 justify-center">
-          <span className="bg-gray-800 px-4 py-2 rounded-xl text-sm flex items-center gap-2 hover:bg-gray-700 transition">
-            <Code2 size={16} /> Java & Spigot APIs
-          </span>
-          <span className="bg-gray-800 px-4 py-2 rounded-xl text-sm flex items-center gap-2 hover:bg-gray-700 transition">
-            ⚙️ Plugin Configuration
-          </span>
-          <span className="bg-gray-800 px-4 py-2 rounded-xl text-sm flex items-center gap-2 hover:bg-gray-700 transition">
-            🚀 Server Optimization
-          </span>
-          <span className="bg-gray-800 px-4 py-2 rounded-xl text-sm flex items-center gap-2 hover:bg-gray-700 transition">
-            🎨 GUI / Menu Design
-          </span>
-        </div>
-      </motion.section>
-
-      {/* Projects */}
-      <motion.section
-        className="max-w-3xl mt-12 grid gap-6"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-      >
-        <h2 className="text-2xl font-bold mb-4">Projects</h2>
-        <div className="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-emerald-400/30 transition">
-          <h3 className="text-xl font-semibold">MineWither</h3>
-          <p className="text-gray-300 mt-2">
-            MineWither was a Minecraft server inspired by EarthSMP and Lifesteal.
-            It brought a challenging survival world where strategy and teamwork
-            really mattered. A fun project that grew an amazing little community.
-          </p>
-          <p className="text-sm text-red-400 mt-2">Status: Closed (December 2024)</p>
-        </div>
-
-        <div className="bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-emerald-400/30 transition">
-          <h3 className="text-xl font-semibold">DeluxeMenus Work</h3>
-          <p className="text-gray-300 mt-2">
-            I enjoy making custom GUIs with DeluxeMenus—things like profile pages,
-            vehicle shops, Earth RTP menus, and more. Clean designs that make
-            servers easier and more fun to play on.
-          </p>
-          <p className="text-sm text-gray-400 mt-2">
-            Want to see more? Hit me up on Discord!
-          </p>
-        </div>
-      </motion.section>
-
-      {/* Contact */}
-      <motion.section
-        className="mt-12"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <a
-          href="https://discord.gg/dW3ghsECt9"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-7 py-3 rounded-full shadow-lg transition transform hover:scale-105"
-        >
-          <Disc size={20} /> Let’s Connect on Discord
-        </a>
-      </motion.section>
+  <!-- Skills -->
+  <section class="skills">
+    <h2>What I Work With</h2>
+    <div class="skill-list">
+      <div class="skill">💻 Java & Spigot APIs</div>
+      <div class="skill">⚙️ Plugin Configuration</div>
+      <div class="skill">🚀 Server Optimization</div>
+      <div class="skill">🎨 GUI / Menu Design</div>
     </div>
-  );
-}
+  </section>
+
+  <!-- Projects -->
+  <section class="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+      <h3>MineWither</h3>
+      <p>
+        MineWither was a Minecraft server inspired by EarthSMP and Lifesteal.
+        It brought a challenging survival world where strategy and teamwork really mattered.
+        A fun project that grew an amazing little community.
+      </p>
+      <p class="status">Status: Closed (December 2024)</p>
+    </div>
+
+    <div class="project-card">
+      <h3>DeluxeMenus Work</h3>
+      <p>
+        I enjoy making custom GUIs with DeluxeMenus—things like profile pages,
+        vehicle shops, Earth RTP menus, and more. Clean designs that make servers
+        easier and more fun to play on.
+      </p>
+      <p class="status gray">Want to see more? Hit me up on Discord!</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <footer class="contact">
+    <a href="https://discord.gg/dW3ghsECt9" target="_blank" class="discord-btn">
+      💬 Let’s Connect on Discord
+    </a>
+  </footer>
+</body>
+</html>
