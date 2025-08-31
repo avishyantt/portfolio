@@ -1,4 +1,4 @@
-/* Reset + Base */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,116 +7,101 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #0f0f0f;
-  color: #f1f1f1;
+  background: #0d1117;
+  color: #e6edf3;
   line-height: 1.6;
-  text-align: center;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: auto;
   padding: 20px;
+  text-align: center;
 }
 
-/* Header */
-.header {
-  margin-top: 30px;
-}
-
+/* Profile picture */
 .pfp {
   width: 140px;
   height: 140px;
-  border-radius: 50%;
-  border: 3px solid #ffcc00;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;      /* keeps square */
+  border-radius: 50%;       /* makes circle */
+  border: 3px solid #3ba7ff;
   margin-bottom: 15px;
   transition: transform 0.3s ease;
+  animation: glow 3s infinite ease-in-out;
 }
+
 .pfp:hover {
   transform: scale(1.05);
 }
 
+/* Headings */
 h1 {
-  font-size: 2.2rem;
-  margin-bottom: 5px;
+  font-size: 2.5rem;
+  color: #3ba7ff;
+  margin-bottom: 8px;
 }
 
 .location {
   font-size: 1rem;
-  color: #aaa;
+  color: #8eaedc;
   margin-bottom: 20px;
 }
 
-.intro {
-  max-width: 700px;
-  margin: auto;
-  font-size: 1.05rem;
-  color: #ddd;
-}
-
-/* Projects */
-.projects {
-  margin: 60px auto;
-  max-width: 900px;
-}
-
-.projects h2 {
-  font-size: 1.8rem;
+p {
   margin-bottom: 20px;
-  color: #ffcc00;
+  color: #c9d1d9;
 }
 
-.project-card {
-  background: #1b1b1b;
-  border-radius: 12px;
+/* Sections */
+.section {
+  margin: 50px 0;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #3ba7ff;
+  margin-bottom: 15px;
+}
+
+/* Project cards */
+.project {
+  background: #161b22;
   padding: 20px;
-  margin: 20px 0;
+  border-radius: 12px;
+  margin-bottom: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.project-card:hover {
+
+.project:hover {
   transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
-}
-.project-card h3 {
-  margin-bottom: 10px;
-  color: #ffcc00;
-}
-.project-card p {
-  margin-bottom: 8px;
-  color: #ddd;
-}
-.status {
-  font-size: 0.9rem;
-  color: #aaa;
+  box-shadow: 0 8px 20px rgba(59, 167, 255, 0.3);
 }
 
-/* Contact */
-.contact {
-  margin: 60px auto;
-}
-
-.discord-btn {
-  display: inline-block;
-  padding: 12px 25px;
-  border-radius: 25px;
-  background: #5865F2;
+/* Buttons */
+button, .btn {
+  background: #3ba7ff;
   color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.discord-btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 4px 14px rgba(88, 101, 242, 0.6);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/* Footer */
-.footer {
-  margin-top: 50px;
-  font-size: 0.9rem;
-  color: #666;
+button:hover, .btn:hover {
+  background: #1e90ff;
+  transform: scale(1.05);
 }
 
 /* Animations */
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -132,8 +117,10 @@ h1 {
 .fade-delay-1 { animation-delay: 0.2s; }
 .fade-delay-2 { animation-delay: 0.4s; }
 .fade-delay-3 { animation-delay: 0.6s; }
-.fade-delay-4 { animation-delay: 0.8s; }
-.fade-delay-5 { animation-delay: 1s; }
-.fade-delay-6 { animation-delay: 1.2s; }
-.fade-delay-7 { animation-delay: 1.4s; }
-.fade-delay-8 { animation-delay: 1.6s; }
+
+/* Glow effect for pfp */
+@keyframes glow {
+  0%   { box-shadow: 0 0 0px #3ba7ff; }
+  50%  { box-shadow: 0 0 15px #3ba7ff; }
+  100% { box-shadow: 0 0 0px #3ba7ff; }
+}
